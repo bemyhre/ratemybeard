@@ -1,14 +1,12 @@
   	
   <div class="grid_14">
-    <h1><%=@my_user.username%>'s Beard feed</h1>
-    <h2> click on an image in your feed to put it in the rating queue</h2>
+    <h1><%=@my_user.username%>'s feed</h1>
+    <h2> click on an image of facial hair in your feed to let people rate your best facial... hair.</h2>
   </div>
   	<%for media_item in @page_1%>
-    	<a href="/pictures?picture=<%=media_item.images.low_resolution.url%>"><img src="<%=media_item.images.thumbnail.url%>"></a>
+    	<a href="/pictures/new?picture=<%=media_item.images.low_resolution.url%>"><img src="<%=media_item.images.thumbnail.url%>"></a>
   	<%end%>
     <%for media_item in @page_2%>
       <img src="<%=media_item.images.thumbnail.url%>">
     <%end%>
 
-
-  <%=media_item.images.low_resolution.url%>
