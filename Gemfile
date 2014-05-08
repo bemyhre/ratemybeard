@@ -18,8 +18,9 @@ gem 'rake'
 gem 'shotgun'
 gem 'instagram'
 gem 'httparty'
+gem 'rspec'
 
 group :test do
   gem 'faker'
-  gem 'rspec'
+
 end
