@@ -1,0 +1,32 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+body{
+
+	background: #E9D8C0;
+}
+
+ul {
+	list-style-type: none;
+
+}
+#login_images{
+	margin-left: 50%;
+	margin-right: 50%;
+
+
+}
+
+#login_button{
+	margin-left: 45%;
+
+}
+
+

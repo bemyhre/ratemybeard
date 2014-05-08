@@ -1,0 +1,12 @@
+  	
+  <div class="grid_14">
+    <h1><%=@my_user.username%>'s Beard feed <%=@my_user.id%></h1>
+  </div>
+  <ul class="selfimagelist">
+  	<%for media_item in @page_1%>
+    	<li> <img src="<%=media_item.images.thumbnail.url%>"></li>
+  	<%end%>
+    <%for media_item in @page_2%>
+      <li><img src="<%=media_item.images.thumbnail.url%>"></li>
+    <%end%>
+  </ul>
