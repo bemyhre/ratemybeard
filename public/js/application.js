@@ -1,8 +1,8 @@
-$(document).ready(function() {
+window.onload=function(){
 	//model=new Model
   // view=new View();
   bindEvents();
-});
+};
 
 
 function bindEvents(){
@@ -22,5 +22,7 @@ function addPicture(e){
 
   dataRequest.done(window.location.href = urlToGoTo)
 }
+
+// 
 
 
