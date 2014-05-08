@@ -1,3 +1,6 @@
+require "sinatra"
+require "instagram"
+
 get '/users' do 
 	@user=session[:access_token]
 	@client = Instagram.client(:access_token => session[:access_token])
