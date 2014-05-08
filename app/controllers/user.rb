@@ -2,6 +2,7 @@ require "sinatra"
 require "instagram"
 
 get '/users' do 
+	
 	@user=session[:access_token]
 	@client = Instagram.client(:access_token => session[:access_token])
 	@my_user = @client.user
@@ -10,7 +11,8 @@ get '/users' do
 	end
 	@logged_in_user=User.find_by_instagram_id(@user)
 	session[:id]=@my_user.id
-	p session[:id]
+	session[:myid]=User.find_by_instagram_id(@my_user.id)[:id]
+	#session[:my_id]=
 	@page_1 = @client.user_media_feed(777)
 	@page_2_max_id = @page_1.pagination.next_max_id
 	@page_2 = @client.user_recent_media(777, :max_id => @page_2_max_id ) unless @page_2_max_id.nil?

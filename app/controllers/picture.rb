@@ -11,6 +11,13 @@ get '/pictures/new' do
 	end
 end
 
+get'/pictures' do 
+	redirect '/users'
+end
+
 post '/pictures' do 
-	pic=Picture.new(params)
+	p "SSSSSSSSSSSSS"
+	p params[:url]
+	User.find(session[:myid]).pictures<<Picture.create(url: params[:url])
+	redirect '/users'
 end
